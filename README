@@ -1,0 +1,42 @@
+To install kaggle datasets we must download it from the terminal
+    pip install kaggle
+
+Update pip
+    python.exe -m pip install --upgrade pip
+
+Download API Key from creating Kaggle account, found within settings and create API [https://www.kaggle.com/account/login?phase=startRegisterTab&returnUrl=%2Fcreate-account]
+toke, it will download a .json file named 'kaggle.json', place it in a '.kaggle' directory
+*MUST BE IN C:\Users\{PC_USER}\*
+NOTES FOR COMMANDS
+ls -> list (lists files in that directory
+cd -> change directories
+EX. cd ../ (../ is to go back)
+
+Real life example:
+ C:\Users\{PC_USER}\[project_name]
+ cd ../
+ C:\Users\{PC_USER}
+ mkdir .kaggle
+
+Copy file from the download path folder (Find .json and right click and copy PATH)
+    cp C:\Users\{PC_USER}\Downloads\kaggle.json
+
+To find datasets list
+    kaggle datasets list -s '{DESIRED_DATASET}'
+Ex.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+mlg-ulb/creditcardfraud                                           Credit Card Fraud Detection                        66MB  2018-03-23 01:17:27
+655870(DownloadCount)         11083(VoteCounts)     0.85294116(Usability)
+whenamancodes/fraud-detection                                     Fraud Detection                                    66MB  2022-09-12 11:54:40
+6990(DownloadCount)           97(VoteCounts)     1.0(Usability)
+ealaxi/paysim1                                                    Synthetic Financial Datasets For Fraud Detection  178MB  2017-04-03 08:40:34
+86276(DownloadCount)          1330(VoteCounts)     0.88235295(Usability)
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+To download dataset list .zip file
+     kaggle datasets download -d 'mlg-ulb/creditcardfraud'
+
+Go to downloaded file *in file explorer* and extract in
+    C:\Users\gianc\PycharmProjects\Hate-Speech-Detection
+
+Then rename folder to data for readability
