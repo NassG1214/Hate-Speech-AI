@@ -4,6 +4,14 @@ import re
 from transformers import pipeline
 import torch
 
+@article{aluru2020deep,
+  title={Deep Learning Models for Multilingual Hate Speech Detection},
+  author={Aluru, Sai Saket and Mathew, Binny and Saha, Punyajoy and Mukherjee, Animesh},
+  journal={arXiv preprint arXiv:2004.06465},
+  year={2020}
+}
+
+
 # 0 = first GPU, -1 = CPU fallback
 device = 0 if torch.cuda.is_available() else -1  
 
