@@ -1,7 +1,11 @@
 import tkinter as tk
-from tkinter import scrolledtext, messagebox, Toplevel
+from tkinter import scrolledtext, messagebox, Toplevel, OptionMenu, Button
 import re
 from transformers import pipeline
+import torch
+
+# 0 = first GPU, -1 = CPU fallback
+device = 0 if torch.cuda.is_available() else -1  
 
 # Initialize the pipeline for text classification
 pipe = pipeline("text-classification", model="Hate-speech-CNERG/dehatebert-mono-english")
@@ -23,7 +27,7 @@ def symbol_detector(text):
         return text
 
 
-def identifier(text):
+def identifier(text): 
     results = pipe(text)
     first_result = results[0]
     label = first_result['label']
